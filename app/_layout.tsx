@@ -6,16 +6,18 @@ import React from "react";
 import { useSetupTrackPlayer } from "@/hooks/useSetupTrackPlayer";
 import TrackPlayer, { RepeatMode } from 'react-native-track-player'
 import { useLogTrackPlayerState } from "@/hooks/useLogTrackPlayerState";
+import { Text } from "react-native";
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 // Impede a splash screen de esconder automaticamente antes de o app estar pronto.
 SplashScreen.preventAutoHideAsync();
 
 const App = () => {
   return (
-    <>
+    <GestureHandlerRootView style={{ flex: 1 }}>
       <RootNavigation />
       <StatusBar style="light" />
-    </>
+    </GestureHandlerRootView>
   );
 }
 
@@ -54,6 +56,16 @@ const RootNavigation = () => {
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(root)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="player"
+        options={{
+          headerShown: false,
+          presentation: 'card',
+          gestureEnabled: true,
+          gestureDirection: 'vertical',
+          animationDuration: 400
+        }}
+      />
     </Stack>
   );
 }

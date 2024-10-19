@@ -6,9 +6,10 @@ type MovingTextProps = {
     text: string;
     animationThreshold: number;
     style?: StyleProps;
+    className?: string;
 }
 
-const MovingText = ({ text, animationThreshold, style }: MovingTextProps) => {
+const MovingText = ({ text, animationThreshold, style, className }: MovingTextProps) => {
 
     const translateX = useSharedValue(0);
     const shouldAnimate = text.length >= animationThreshold;
@@ -44,12 +45,12 @@ const MovingText = ({ text, animationThreshold, style }: MovingTextProps) => {
     });
 
     return (
-        <Animated.Text className='text-base font-semibold pl-1 text-secondary-300' numberOfLines={1} style={[
+        <Animated.Text className={`text-base font-semibold text-secondary-300 ${className}`} numberOfLines={1} style={[
             style,
             animatedStyle,
             shouldAnimate && {
                 width: 9999, // preventing the ellipsis from appearing
-                paddingLeft: 16, // avoid the initial character being barely visible
+                paddingLeft: 5, // avoid the initial character being barely visible
             }
         ]}>
             {text}
