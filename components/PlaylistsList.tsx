@@ -30,7 +30,7 @@ const PlaylistsList = ({ playlists, onPlaylistSelect, showCreatePlaylistButton =
                 <View className='rounded-full h-24 w-24 items-center justify-center bg-secondary-900'>
                     <MaterialIcons name="music-off" size={35} color={themeColors.secondary[500]} />
                 </View>
-                <Text className='text-2xl mt-4 font-semibold text-secondary-300 text-center'>No sounds found</Text>
+                <Text className='text-2xl mt-4 font-semibold text-secondary-300 text-center'>No playlists found</Text>
                 <Text className='text-sm text-secondary-500 text-center'>Try searching for a different name</Text>
             </View>
         );

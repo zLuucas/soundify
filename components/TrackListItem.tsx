@@ -1,5 +1,5 @@
 import { unknownTrackImageUrl } from '@/src/constants/images';
-import { Entypo, Ionicons } from '@expo/vector-icons';
+import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons';
 import React, { useRef, useState } from 'react'
 import { Image, Platform, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native'
 import { Track, useActiveTrack, useIsPlaying } from 'react-native-track-player';
@@ -99,7 +99,7 @@ const TrackListItem = ({ track, onTrackSelect, queueId, editMode = false }: Trac
                     {editMode && (
                         <Icon
                             icon={
-                                <Entypo name='circle-with-minus' size={18} color={"#83868a"} />
+                                <AntDesign name='minussquare' size={18} color={themeColors.secondary[400]} />
                             }
                             onPress={() => onTrackSelect(track)}
                             classes=''
