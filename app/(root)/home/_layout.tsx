@@ -11,6 +11,11 @@ const HomeScreenLayout = () => {
                     ...StackScreenWithSearchBar,
                     headerTitle: "Home"
                 }} />
+                <Stack.Screen name="artist/[name]" options={{
+                    ...StackScreenWithSearchBar,
+                    title: 'Artist Details',
+                    headerBackTitleVisible: false,
+                }} />
             </Stack>
         </View>
     )

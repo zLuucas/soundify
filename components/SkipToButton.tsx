@@ -22,7 +22,7 @@ const SkipToButton = ({ iconSize, style, action }: SkipToNextButtonProps) => {
 
     return (
         <TouchableOpacity activeOpacity={0.5} onPress={handlePress}>
-            <FontAwesome6 name={action === 'forward' ? 'forward-step' : 'backward-step'} size={iconSize} color={themeColors.primary[700]} />
+            <FontAwesome6 name={action === 'forward' ? 'forward-step' : 'backward-step'} size={iconSize} color={themeColors.secondary[200]} />
         </TouchableOpacity>
     )
 }

@@ -11,6 +11,16 @@ const PlaylistsScreenLayout = () => {
                     ...StackScreenWithSearchBar,
                     headerTitle: "My Music"
                 }} />
+                <Stack.Screen name="[playlistId]" options={{
+                    ...StackScreenWithSearchBar,
+                    title: 'Playlist Details',
+                    headerBackTitleVisible: false,
+                }} />
+                <Stack.Screen name="artist/[name]" options={{
+                    ...StackScreenWithSearchBar,
+                    title: 'Artist Details',
+                    headerBackTitleVisible: false,
+                }} />
             </Stack>
         </View>
     )

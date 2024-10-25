@@ -22,7 +22,7 @@ const PlayerProgressBar = ({ style }: PlayerProgressBarProps) => {
   const trackElapsedTime = formatSecondsToMinutes(position);
   const trackRemainingTime = formatSecondsToMinutes(duration - position);
 
-  if (isSliding.value) {
+  if (!isSliding.value) {
     progress.value = duration > 0 ? position / duration : 0;
   }
 
@@ -53,9 +53,9 @@ const PlayerProgressBar = ({ style }: PlayerProgressBarProps) => {
           await TrackPlayer.seekTo(value * duration);
         }}
       />
-      <View className='w-full flex-row justify-between items-center mt-2'>
-        <Text className='text-secondary-400 text-sm opacity-75 font-medium'>{trackElapsedTime}</Text>
-        <Text className='text-secondary-400 text-sm opacity-75 font-medium'>{trackRemainingTime}</Text>
+      <View className='w-full flex-row justify-between items-center mt-2.5'>
+        <Text className='text-secondary-300 text-sm font-bold'>{trackElapsedTime}</Text>
+        <Text className='text-secondary-400 text-sm font-bold'>{trackRemainingTime}</Text>
       </View>
     </View>
   )

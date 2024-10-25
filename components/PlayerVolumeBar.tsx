@@ -1,4 +1,4 @@
-import { useTrackPlayerVolume } from '@/hooks/useTrackPlayerVolume';
+import { useTrackPlayerVolume } from '@/src/hooks/useTrackPlayerVolume';
 import themeColors from '@/src/constants/colors';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@react-navigation/native';

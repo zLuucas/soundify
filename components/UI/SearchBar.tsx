@@ -8,7 +8,7 @@ const SearchBar = forwardRef<TextInput, InputFieldProps>(
         return (
             <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                    <View className={`w-full ${Platform.OS === 'ios' ? 'mt-2.5' : 'my-2'} h-12`}>
+                    <View className={`w-full ${Platform.OS === 'ios' ? 'mt-4' : 'my-2'} h-12`}>
                         <View className={`flex flex-row justify-start items-center relative bg-secondary-900 rounded-lg focus:border-primary-500 border-neutral-200 dark:border-neutral-600 ${border ? "border" : ""}  ${containerStyle}`}>
                             {icon}
                             <TextInput

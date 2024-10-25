@@ -45,7 +45,7 @@ const MovingText = ({ text, animationThreshold, style, className }: MovingTextPr
     });
 
     return (
-        <Animated.Text className={`text-base font-semibold text-secondary-300 ${className}`} numberOfLines={1} style={[
+        <Animated.Text className={`text-lg font-semibold text-secondary-300 ${className}`} numberOfLines={1} style={[
             style,
             animatedStyle,
             shouldAnimate && {

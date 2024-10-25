@@ -51,7 +51,7 @@ export default function TabLayout() {
           title: "Home",
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name='home' size={30} color={color} />
         }} />
-        <Tabs.Screen name='(songs)' options={{
+        <Tabs.Screen name='songs' options={{
           title: "Songs",
           tabBarIcon: ({ color }) => <AntDesign name='search1' size={24} color={color} />
         }} />

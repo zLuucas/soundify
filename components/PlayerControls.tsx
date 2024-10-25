@@ -11,9 +11,9 @@ const PlayerControls = ({ style }: PlayerControlsProps) => {
 
     return (
         <View className={`flex-row items-center justify-evenly ${style}`}>
-            <SkipToButton action='backward' iconSize={25} />
-            <PlayPauseButton iconSize={30} />
-            <SkipToButton action='forward' iconSize={25} />
+            <SkipToButton action='backward' iconSize={40} />
+            <PlayPauseButton iconSize={45} />
+            <SkipToButton action='forward' iconSize={40} />
         </View>
     )
 }
