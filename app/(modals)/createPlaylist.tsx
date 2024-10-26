@@ -1,3 +1,4 @@
+import CustomButton from '@/components/UI/CustomButton'
 import Icon from '@/components/UI/Icon'
 import themeColors from '@/src/constants/colors'
 import { useStoreDispatch } from '@/src/store/hooks'
@@ -64,15 +65,7 @@ const CreatePlaylist = () => {
                         maxLength={25}
                         autoCorrect={false}
                     />
-                    <TouchableOpacity
-                        activeOpacity={0.8}
-                        className='bg-primary-600 w-[40%] h-10 justify-center rounded-full shadow-md shadow-secondary-900'
-                        onPress={handleOnCreatePlaylist}
-                    >
-                        <Text className='text-black text-center text-xl font-semibold'>
-                            Create
-                        </Text>
-                    </TouchableOpacity>
+                    <CustomButton title='Create' onPress={handleOnCreatePlaylist} classes='mt-10' />
                 </View>
             </LinearGradient>
         </View>

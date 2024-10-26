@@ -1,19 +1,32 @@
 import ProfileOptionsMenu from '@/components/ProfileOptionsMenu'
+import ProfilePicturePicker from '@/components/ProfilePicturePicker'
 import themeColors from '@/src/constants/colors'
 import { unknownArtistImageUrl } from '@/src/constants/images'
+import { useClerk } from '@clerk/clerk-expo'
 import { AntDesign } from '@expo/vector-icons'
+import { useRouter } from 'expo-router'
 import React from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 
 const ProfileScreen = () => {
+
+    const { signOut, user } = useClerk();
+    const router = useRouter();
+
+    const handleSignOut = () => {
+        signOut();
+        router.replace('/(auth)/sign-in');
+    };
+
     return (
         <SafeAreaView className='flex-1 bg-black flex-col'>
 
             <View className='items-center py-10 flex-col space-y-4'>
-                <Image className='h-40 w-40 rounded-full' source={{ uri: unknownArtistImageUrl }} />
+                <ProfilePicturePicker />
+                {/* <Image className='h-40 w-40 rounded-full' source={{ uri: user?.imageUrl }} /> */}
                 <View className='flex-col items-center'>
-                    <Text className='text-white text-lg font-bold'>Hello Lucas Matias</Text>
-                    <Text className='text-secondary-500 font-semibold'>lucas.matias010@hotmail.com</Text>
+                    <Text className='text-white text-lg font-bold'>Hello, {user?.fullName}</Text>
+                    <Text className='text-secondary-500 font-semibold'>{user?.primaryEmailAddress?.emailAddress}</Text>
                 </View>
 
                 <View className='rounded-lg pt-5'>
@@ -51,13 +64,12 @@ const ProfileScreen = () => {
                             },
                             {
                                 icon: <AntDesign name='logout' size={20} color={themeColors.secondary[400]} />,
-                                action: () => { },
+                                action: handleSignOut,
                                 title: 'Logout'
                             }
                         ]}
                     />
                 </View>
-
             </View>
         </SafeAreaView>
     )

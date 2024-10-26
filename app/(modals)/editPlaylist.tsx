@@ -1,4 +1,5 @@
 import TracksList from '@/components/TracksList'
+import CustomButton from '@/components/UI/CustomButton'
 import Icon from '@/components/UI/Icon'
 import themeColors from '@/src/constants/colors'
 import { unknownTrackImageUrl } from '@/src/constants/images'
@@ -116,15 +117,7 @@ const EditPlaylist = () => {
                     classes='mt-10'
                 />
                 <View className='items-center'>
-                    <TouchableOpacity
-                        activeOpacity={0.8}
-                        className='bg-primary-600 w-[40%] h-10 justify-center rounded-full shadow-md shadow-secondary-900'
-                        onPress={handleOnSave}
-                    >
-                        <Text className='text-black text-center text-xl font-semibold'>
-                            Save
-                        </Text>
-                    </TouchableOpacity>
+                    <CustomButton title='Save' onPress={handleOnSave} />
                 </View>
 
             </LinearGradient>
