@@ -1,7 +1,9 @@
 import { launchImageLibraryAsync, MediaTypeOptions, PermissionStatus, useCameraPermissions } from 'expo-image-picker';
 import React, { useEffect, useState } from 'react'
-import { Alert, Image, Pressable, StyleSheet } from 'react-native'
+import { Alert, Pressable, StyleSheet, View } from 'react-native'
 import { useClerk } from '@clerk/clerk-expo';
+import { Image } from 'expo-image';
+import { AntDesign } from '@expo/vector-icons';
 
 const ProfilePicturePicker = () => {
 
@@ -11,6 +13,8 @@ const ProfilePicturePicker = () => {
 
     const [cameraPermissionInfo, requestPermission] = useCameraPermissions();
     const [pickedImage, setPickedImage] = useState<string | null>();
+
+    const [key, setKey] = useState(0);
 
     useEffect(() => {
     }, [user]);
@@ -52,7 +56,9 @@ const ProfilePicturePicker = () => {
             const base64Image = `data:image/jpeg;base64,${image.assets[0].base64}`;
             if (base64Image) {
                 try {
+                    await Image.clearDiskCache();
                     await user.setProfileImage({ file: base64Image! });
+                    setKey((prev) => prev + 1);
                 } catch (err: any) {
                     console.error(err.errors);
                 }
@@ -66,12 +72,16 @@ const ProfilePicturePicker = () => {
                 opacity: pressed ? 0.8 : 1,
             }]} onPress={handleTakeImage} onLongPress={() => { }}>
                 <Image
-                    className='h-[120px] w-[120px] rounded-full bg-transparent'
+                    className='h-36 w-36 border border-white rounded-full bg-transparent'
                     source={{
                         uri: user.imageUrl,
                     }}
-                    resizeMode='cover'
+                    cachePolicy='disk'
+                    contentFit='cover'
                 />
+                <View className='rounded-full bg-secondary-900 border border-secondary-800 p-3 absolute right-0 bottom-0'>
+                    <AntDesign name='camerao' size={25} color='white' />
+                </View>
             </Pressable>
         </>
 

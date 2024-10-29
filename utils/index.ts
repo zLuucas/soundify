@@ -1,7 +1,7 @@
 import library from '@/assets/data/library.json'
 import { Track } from 'react-native-track-player';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Playlist } from '@/src/types';
+import { Playlist, SettingsData } from '@/src/types';
 
 export const formatSecondsToMinutes = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
@@ -43,6 +43,15 @@ export const storePlaylists = async (playlists: Playlist[]) => {
     }
 }
 
+export const storeSettings = async (settings: SettingsData) => {
+    try {
+        const jsonValue = JSON.stringify(settings);
+        await AsyncStorage.setItem('settings', jsonValue);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 export const getStoredPlaylists = async (): Promise<Playlist[]> => {
     try {
         const jsonValue = await AsyncStorage.getItem('my-playlists');
@@ -62,5 +71,24 @@ export const getStoredPlaylists = async (): Promise<Playlist[]> => {
 
     } catch (err) {
         return [];
+    }
+}
+
+export const getStoredSettings = async (): Promise<SettingsData> => {
+    try {
+        const jsonValue = await AsyncStorage.getItem('settings');
+
+        return jsonValue != null ? (JSON.parse(jsonValue) as SettingsData) : {
+            audioQuality: 'Low',
+            notifications: false,
+            usePhoneData: false
+        };
+
+    } catch (err) {
+        return {
+            audioQuality: 'Low',
+            notifications: false,
+            usePhoneData: false
+        };
     }
 }

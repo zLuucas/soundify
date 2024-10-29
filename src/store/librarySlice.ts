@@ -32,6 +32,10 @@ export const librarySlice = createSlice({
                     return;
                 }
 
+                if (state.playlists[playlistIndex].tracks.length === 0) {
+                    state.playlists[playlistIndex].artworkPreview = track.artwork!;
+                }
+
                 state.playlists[playlistIndex].tracks.push(track.title!);
                 setPlaylists(state.playlists);
             }
@@ -43,6 +47,11 @@ export const librarySlice = createSlice({
             const playlistIndex = state.playlists.findIndex((playlist) => playlist.name === playlistName);
 
             if (playlistIndex !== -1) {
+
+                if (state.playlists[playlistIndex].artworkPreview === track.artwork) {
+                    state.playlists[playlistIndex].artworkPreview = '';
+                }
+
                 state.playlists[playlistIndex].tracks = state.playlists[playlistIndex].tracks.filter((t) => t !== track.title);
             }
         },

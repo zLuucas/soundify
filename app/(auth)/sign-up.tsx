@@ -83,7 +83,7 @@ const SignUpScreen = () => {
         try {
             const completeSignUp = await signUp.attemptEmailAddressVerification({
                 code,
-            })
+            });
 
             if (completeSignUp.status === 'complete') {
                 await setActive({ session: completeSignUp.createdSessionId })
@@ -92,7 +92,7 @@ const SignUpScreen = () => {
                     {
                         text: 'OK',
                         onPress: () => {
-                            router.replace('/')
+                            router.replace('/');
                         }
                     }
                 ]);

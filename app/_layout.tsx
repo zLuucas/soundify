@@ -11,11 +11,13 @@ import { Provider } from 'react-redux'
 import { store } from "@/src/store/store";
 import { playbackService } from "@/src/constants/playbackServices";
 import { useStoreDispatch } from "@/src/store/hooks";
-import { getStoredPlaylists } from "@/utils";
+import { getStoredPlaylists, getStoredSettings } from "@/utils";
 import { setPlaylists } from "@/src/store/librarySlice";
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo'
 import { tokenCache } from "@/src/lib/auth";
 import { LogBox } from 'react-native';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import { updateSettings } from "@/src/store/userSlice";
 
 // Impede a splash screen de esconder automaticamente antes de o app estar pronto.
 SplashScreen.preventAutoHideAsync();
@@ -28,10 +30,12 @@ LogBox.ignoreLogs(["Failed to setup track player"])
 const App = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Provider store={store}>
-        <RootNavigation />
-        <StatusBar style="light" />
-      </Provider>
+      <BottomSheetModalProvider>
+        <Provider store={store}>
+          <RootNavigation />
+          <StatusBar style="light" />
+        </Provider>
+      </BottomSheetModalProvider>
     </GestureHandlerRootView>
   );
 }
@@ -61,6 +65,9 @@ const RootNavigation = () => {
 
     const setupStorage = async () => {
       const playlists = await getStoredPlaylists();
+      const settings = await getStoredSettings();
+
+      dispatch(updateSettings({ data: settings }));
 
       if (playlists.length > 0) {
         dispatch(setPlaylists(playlists));

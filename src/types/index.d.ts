@@ -53,3 +53,17 @@ declare interface PlaylistUpdatePayload {
     oldPlaylistName: string;
     playlist: Playlist;
 }
+
+declare interface UserState {
+    imageUrl: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    settings: SettingsData;
+}
+
+declare interface SettingsData {
+    audioQuality: AudioQualityOptions;
+    notifications: boolean;
+    usePhoneData: boolean;
+}

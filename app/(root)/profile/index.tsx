@@ -2,16 +2,29 @@ import ProfileOptionsMenu from '@/components/ProfileOptionsMenu'
 import ProfilePicturePicker from '@/components/ProfilePicturePicker'
 import themeColors from '@/src/constants/colors'
 import { unknownArtistImageUrl } from '@/src/constants/images'
+import { useUser } from '@/src/hooks/useUser'
+import { useStoreSelector } from '@/src/store/hooks'
 import { useClerk } from '@clerk/clerk-expo'
 import { AntDesign } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 
 const ProfileScreen = () => {
 
-    const { signOut, user } = useClerk();
+    const { signOut } = useClerk();
+
+    const { email, firstName, imageUrl, lastName } = useUser().user;
+
     const router = useRouter();
+
+    const handleEditProfile = () => {
+        router.push(`/(root)/profile/editProfile?firstName=${firstName}&lastName=${lastName}&email=${email}`);
+    }
+
+    const handleSettings = () => {
+        router.push(`/(root)/profile/settings`);
+    }
 
     const handleSignOut = () => {
         signOut();
@@ -22,11 +35,10 @@ const ProfileScreen = () => {
         <SafeAreaView className='flex-1 bg-black flex-col'>
 
             <View className='items-center py-10 flex-col space-y-4'>
-                <ProfilePicturePicker />
-                {/* <Image className='h-40 w-40 rounded-full' source={{ uri: user?.imageUrl }} /> */}
+                <Image className='h-36 w-36 rounded-full border border-white' source={{ uri: imageUrl }} />
                 <View className='flex-col items-center'>
-                    <Text className='text-white text-lg font-bold'>Hello, {user?.fullName}</Text>
-                    <Text className='text-secondary-500 font-semibold'>{user?.primaryEmailAddress?.emailAddress}</Text>
+                    <Text className='text-white text-lg font-bold'>Hello, {firstName} {lastName}</Text>
+                    <Text className='text-secondary-500 font-semibold'>{email}</Text>
                 </View>
 
                 <View className='rounded-lg pt-5'>
@@ -34,7 +46,7 @@ const ProfileScreen = () => {
                         actions={[
                             {
                                 icon: <AntDesign name='user' size={20} color={themeColors.secondary[400]} />,
-                                action: () => { },
+                                action: handleEditProfile,
                                 title: 'Edit Profile'
                             },
                             {
@@ -44,7 +56,7 @@ const ProfileScreen = () => {
                             },
                             {
                                 icon: <AntDesign name='setting' size={20} color={themeColors.secondary[400]} />,
-                                action: () => { },
+                                action: handleSettings,
                                 title: 'Settings'
                             },
                             {

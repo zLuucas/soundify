@@ -7,26 +7,27 @@ type CustomButtonProps = {
   title: string;
   onPress: () => void;
   classes?: string;
+  textClasses?: string;
   loading?: boolean;
   variant?: 'default' | 'text';
 }
 
-const CustomButton = ({ title, onPress, classes, loading = false, variant = 'default' }: CustomButtonProps) => {
+const CustomButton = ({ title, onPress, classes, textClasses, loading = false, variant = 'default' }: CustomButtonProps) => {
 
   const isDefault = variant === 'default';
 
   const defaultClasses = 'bg-primary-600 w-[40%] h-10 justify-center rounded-full shadow-md shadow-secondary-900';
-  const textClasses = 'bg-transparent justify-center rounded-full py-2.5 px-4';
+  const textVariantClasses = 'bg-transparent justify-center rounded-full py-2.5 px-4';
 
   return (
     <TouchableOpacity
       activeOpacity={isDefault ? 0.8 : 0.5}
-      className={`${isDefault ? defaultClasses : textClasses} ${classes}`}
+      className={`${isDefault ? defaultClasses : textVariantClasses} ${classes}`}
       onPress={onPress}
     >
       {
         !loading
-          ? <Text className={`${isDefault ? 'text-black font-semibold text-xl' : 'text-primary-600 font-normal text-lg'}  text-center  `}>
+          ? <Text className={`${isDefault ? 'text-black font-semibold text-xl' : 'text-primary-600 font-normal text-lg'}  text-center ${textClasses}`}>
             {title}
           </Text>
           : <ActivityIndicator
