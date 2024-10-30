@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const SidePlaylistsScroll = () => {
     return (
-        <ScrollView horizontal className='flex-1'>
+        <ScrollView automaticallyAdjustContentInsets horizontal className='flex-1'>
             {genresPlaylists.map(({ image, name }, index) => {
 
                 const isFirst = index === 0;

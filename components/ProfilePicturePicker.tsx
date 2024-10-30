@@ -12,12 +12,8 @@ const ProfilePicturePicker = () => {
     if (!user) return null;
 
     const [cameraPermissionInfo, requestPermission] = useCameraPermissions();
-    const [pickedImage, setPickedImage] = useState<string | null>();
 
     const [key, setKey] = useState(0);
-
-    useEffect(() => {
-    }, [user]);
 
     const verifyPermissions = async () => {
         if (cameraPermissionInfo?.status === PermissionStatus.UNDETERMINED) {
@@ -57,6 +53,7 @@ const ProfilePicturePicker = () => {
             if (base64Image) {
                 try {
                     await Image.clearDiskCache();
+                    await Image.clearMemoryCache();
                     await user.setProfileImage({ file: base64Image! });
                     setKey((prev) => prev + 1);
                 } catch (err: any) {

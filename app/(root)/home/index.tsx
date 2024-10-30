@@ -54,24 +54,29 @@ const HomeScreen = () => {
                         <Text className='text-secondary-500 text-sm'>What you want to listen today?</Text>
                     </View>
                 </View>
-                <UserPlaylistsList />
+                <View className='mt-6'>
+                    <View className='justify-between flex-row items-center mb-2'>
+                        <Text className='text-secondary-100 font-bold text-xl'>My Playlists</Text>
+                        <CustomButton title='View All' variant='text' onPress={() => router.navigate('/(root)/my_music')} classes='my-0 py-0' textClasses='text-sm' />
+                    </View>
+                    <UserPlaylistsList />
+                </View>
                 <View className='mt-9'>
                     <View className='justify-between flex-row items-center mb-2'>
                         <Text className='text-secondary-100 font-bold text-xl'>Top Picks</Text>
-                        <CustomButton title='View All' variant='text' onPress={(() => { })} classes='my-0 py-0' textClasses='text-sm' />
+                        <CustomButton title='View All' variant='text' onPress={() => router.navigate('/(root)/songs')} classes='my-0 py-0' textClasses='text-sm' />
                     </View>
                     <Swiper style={{ borderRadius: 8 }} height={200} horizontal activeDotColor={themeColors.secondary[100]} dotColor={themeColors.secondary[500]}>
                         {swiperPlaylists.map(({ name, image }, index) => (
                             <TouchableOpacity activeOpacity={0.8} onPress={() => router.navigate('/(root)/songs')} key={index} className='justify-center items-center flex-1 rounded-lg '>
                                 <Image
                                     source={{ uri: image }}
-                                    className='w-full h-full relative rounded-lg'
+                                    className='w-full h-full rounded-lg'
                                     contentFit='cover'
-                                >
-                                    <Text className='absolute bottom-4 left-2 font-bold text-2xl text-white'>
-                                        {name}
-                                    </Text>
-                                </Image>
+                                />
+                                <Text className='bottom-4 left-2 font-bold text-2xl text-white absolute'>
+                                    {name}
+                                </Text>
                             </TouchableOpacity>
                         ))}
                     </Swiper>
@@ -79,7 +84,7 @@ const HomeScreen = () => {
                 <View className='mt-10'>
                     <View className='justify-between flex-row items-center mb-2'>
                         <Text className='text-secondary-100 font-bold text-xl'>Best Genres</Text>
-                        <CustomButton title='View All' variant='text' onPress={(() => { })} classes='my-0 py-0' textClasses='text-sm' />
+                        <CustomButton title='View All' variant='text' onPress={() => router.navigate('/(root)/songs')} classes='my-0 py-0' textClasses='text-sm' />
                     </View>
                     <SidePlaylistsScroll />
                 </View>

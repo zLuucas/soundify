@@ -20,7 +20,7 @@ const UserPlaylistsList = () => {
     const rowNumber = Math.ceil(userPlaylists.length / maxRowCell) <= 8 ? Math.ceil(userPlaylists.length / maxRowCell) : 8;
 
     return (
-        <View className='mt-10'>
+        <View>
             {Array.from({ length: rowNumber }).map((_, rowIndex) => (
                 <View key={rowIndex} className="flex-row w-full">
                     {userPlaylists
