@@ -82,15 +82,15 @@ Soundify é um aplicativo de streaming de música desenvolvido com **React Nativ
 ## 🛠 <a name="instalacao-e-configuracao">Instalação e Configuração</a>
 
 1. Clone este repositório:
-```bash
-git clone https://github.com/zLuucas/soundify
-cd soundify
-```
+  ```bash
+  git clone https://github.com/zLuucas/soundify
+  cd soundify
+  ```
 
 2. Instale as dependências:
-```bash
-npm install
-```
+  ```bash
+  npm install
+  ```
 
 3. **Baixar as Builds Especiais**
 
