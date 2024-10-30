@@ -1,9 +1,7 @@
 
 <div align="center">
   <br />
-    <a href="https://youtu.be/seu-video-id" target="_blank">
       <img src="./assets/gitimages/logo.png" alt="Tela inicial do Soundify" width="600">
-    </a>
   <br />
 
   <div>
@@ -14,12 +12,14 @@
     <img src="https://img.shields.io/badge/-TailwindCSS-black?style=for-the-badge&logoColor=white&logo=tailwind-css&color=38B2AC" alt="tailwind" />
   </div>
 
-<h3 align="center">Soundify 🎶</h3>
-
   <p align="center">
     Um aplicativo de streaming de música feito com <strong>React Native</strong> e <strong>Expo</strong> que traz a experiência imersiva de ouvir suas músicas favoritas, explorar playlists e descobrir novos artistas.
   </p>
 </div>
+
+**[English](#en) | [Português](#pt)**
+
+<a name="pt"><h1>🇧🇷 Português</h1></a>
 
 ## 📋 Tabela de Conteúdos
 
@@ -66,14 +66,16 @@ Soundify é um aplicativo de streaming de música desenvolvido com **React Nativ
 ## 🛠 <a name="instalacao-e-configuracao">Instalação e Configuração</a>
 
 1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/soundify.git
-   cd soundify
-   ```
+```bash
+git clone https://github.com/seu-usuario/soundify.git
+cd soundify
+```
+
 2. Instale as dependências:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
+
 3. **Baixar as Builds Especiais**
 
    Este projeto utiliza código nativo, então é necessário utilizar uma build especial para cada plataforma:
@@ -89,9 +91,9 @@ Soundify é um aplicativo de streaming de música desenvolvido com **React Nativ
    - Copie a Publishable Key do projeto.
    - Crie um arquivo `.env` na raiz do projeto e adicione a chave:
 
-   ```bash
-   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY="sua-chave-clerk-aqui"
-   ```
+  ```bash
+  EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY="sua-chave-clerk-aqui"
+  ```
 
 5. **Iniciar o Servidor Expo**
 
