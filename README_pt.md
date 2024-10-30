@@ -83,7 +83,7 @@ Soundify é um aplicativo de streaming de música desenvolvido com **React Nativ
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/soundify.git
+git clone https://github.com/zLuucas/soundify
 cd soundify
 ```
 
