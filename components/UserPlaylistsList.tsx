@@ -2,6 +2,7 @@ import themeColors from '@/src/constants/colors';
 import { unknownTrackImageUrl } from '@/src/constants/images';
 import { useStoreSelector } from '@/src/store/hooks'
 import { Image } from 'expo-image';
+import { router } from 'expo-router';
 import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import LoaderKit from 'react-native-loader-kit';
@@ -32,7 +33,11 @@ const UserPlaylistsList = () => {
 
                             const isPlaying = activeQueueId === name;
 
-                            return <TouchableOpacity key={index} className={`flex-1 flex-row space-x-2 m-1 items-center bg-secondary-900 rounded ${isLeft && 'ml-0'} ${isRight && ''}`}>
+                            return <TouchableOpacity
+                                key={index}
+                                className={`flex-1 flex-row space-x-2 m-1 items-center bg-secondary-900 rounded ${isLeft && 'ml-0'} ${isRight && ''}`}
+                                onPress={() => router.navigate(`/(root)/my_music/${name}`)}
+                            >
                                 <Image
                                     source={{ uri: artworkPreview.length > 0 ? artworkPreview : unknownTrackImageUrl }}
                                     className='w-12 h-12 rounded-l-lg'
