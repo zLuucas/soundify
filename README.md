@@ -23,13 +23,18 @@
 
 ## 📋 Tabela de Conteúdos
 
-1. [Funcionalidades Principais](#funcionalidades-principais)
-2. [Capturas de Tela](#capturas-de-tela)
-3. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-4. [Instalação e Configuração](#instalacao-e-configuracao)
-5. [Arquitetura do Projeto](#arquitetura-do-projeto)
-6. [Contribuições](#contribuicoes)
-7. [Licença](#licenca)
+1. [Introdução](#introducao)
+2. [Funcionalidades Principais](#funcionalidades-principais)
+3. [Capturas de Tela](#capturas-de-tela)
+4. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+5. [Instalação e Configuração](#instalacao-e-configuracao)
+6. [Arquitetura do Projeto](#arquitetura-do-projeto)
+7. [Contribuições](#contribuicoes)
+8. [Licença](#licenca)
+
+## 🚀 <a name="introducao">Introdução</a>
+
+Soundify é um aplicativo de streaming de música desenvolvido com **React Native** e **Expo** que proporciona uma experiência rica para ouvir músicas, explorar playlists e descobrir novos artistas. Utilizando tecnologias modernas, como **Clerk** para autenticação e **Redux** para gerenciamento de estado, o Soundify oferece uma interface de usuário intuitiva com funcionalidades completas de player, favoritos e personalização de playlists.
 
 ## 🎯 <a name="funcionalidades-principais">Funcionalidades Principais</a>
 
