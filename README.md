@@ -13,117 +13,117 @@
   </div>
 
   <p align="center">
-    Um aplicativo de streaming de música feito com <strong>React Native</strong> e <strong>Expo</strong> que traz a experiência imersiva de ouvir suas músicas favoritas, explorar playlists e descobrir novos artistas.
+    A music streaming app built with <strong>React Native</strong> and <strong>Expo</strong>, offering an immersive experience to listen to your favorite songs, explore playlists, and discover new artists.
   </p>
 </div>
 
-**[English](#en) | [Português](#pt)**
+**[Leia em Português](./README_pt.md)
 
-<a name="pt"><h1>🇧🇷 Português</h1></a>
+<a name="en"><h1>🇬🇧 English</h1></a>
 
 ## 📋 Tabela de Conteúdos
 
-1. [Introdução](#introducao)
-2. [Funcionalidades Principais](#funcionalidades-principais)
-3. [Capturas de Tela](#capturas-de-tela)
-4. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-5. [Instalação e Configuração](#instalacao-e-configuracao)
-6. [Arquitetura do Projeto](#arquitetura-do-projeto)
-7. [Contribuições](#contribuicoes)
-8. [Licença](#licenca)
+1. [Introduction](#introduction)
+2. [Main Features](#main-features)
+3. [Screenshots](#screenshots)
+4. [Technologies Used](#technologies-used)
+5. [Installation and Setup](#installation-and-setup)
+6. [Project Architecture](#project-architecture)
+7. [Contributions](#contributions)
+8. [License](#license)
 
-## 🚀 <a name="introducao">Introdução</a>
+## 🚀 <a name="introduction">Introduction</a>
 
-Soundify é um aplicativo de streaming de música desenvolvido com **React Native** e **Expo** que proporciona uma experiência rica para ouvir músicas, explorar playlists e descobrir novos artistas. Utilizando tecnologias modernas, como **Clerk** para autenticação e **Redux** para gerenciamento de estado, o Soundify oferece uma interface de usuário intuitiva com funcionalidades completas de player, favoritos e personalização de playlists.
+Soundify is a music streaming app developed with **React Native** and **Expo** that provides a rich experience for listening to music, exploring playlists, and discovering new artists. Using modern technologies such as **Clerk** for authentication and **Redux** for state management, Soundify offers an intuitive user interface with full player functionality, favorites, and playlist customization.
 
-## 🎯 <a name="funcionalidades-principais">Funcionalidades Principais</a>
+## 🎯 <a name="main-features">Main Features</a>
 
-- **Criação e Login de Contas**: Registre-se e faça login de maneira segura para acessar todos os recursos do aplicativo.
-- **Player Completo**: Controle total de reprodução com funcionalidades de play/pause, repeat e controle de volume.
-- **Tocar Músicas**: Interface de player com todas as funcionalidades completas.
-- **Favoritar Músicas**: Adicione músicas aos favoritos e crie uma playlist personalizada com todas as suas músicas preferidas.
-- **Criação, Edição e Exclusão de Playlists**: Personalize sua experiência com playlists exclusivas.
-- **Navegação entre Artistas**: Explore músicas por artistas e acesse facilmente suas playlists e faixas.
-- **Floating Player Estilo Spotify**: Mantenha o controle do que está tocando com um player flutuante sempre visível.
-- **Barra de Progresso de Música**: Barra interativa que permite acompanhar o progresso, avançar ou retroceder a música.
-- **Edição de Perfil**: Personalize sua conta com a opção de escolher e atualizar a foto de perfil.
+- **Account Creation and Login**: Register and log in securely to access all app features.
+- **Full Player**: Complete playback control with play/pause, repeat, and volume control.
+- **Play Songs**: Full-featured player interface.
+- **Favorite Songs**: Add songs to favorites and create a personalized playlist with all your preferred songs.
+- **Create, Edit, and Delete Playlists**: Customize your experience with exclusive playlists.
+- **Artist Navigation**: Explore songs by artists and easily access their playlists and tracks.
+- **Spotify-Style Floating Player**: Keep track of what’s playing with an always-visible floating player.
+- **Music Progress Bar**: Interactive bar that lets you track progress, skip, or rewind the song.
+- **Profile Editing**: Customize your account by choosing and updating your profile picture.
 
-## 📸 <a name="capturas-de-tela">Capturas de Tela</a>
+## 📸 <a name="screenshots">Screenshots</a>
 
-> Adicione aqui algumas capturas de tela para ilustrar a interface.
+> Add some screenshots here to illustrate the interface.
 
-## 🚀 <a name="tecnologias-utilizadas">Tecnologias Utilizadas</a>
+## 🚀 <a name="technologies-used">Technologies Used</a>
 
-- **TypeScript**: Superset do JavaScript que adiciona tipagem estática para um desenvolvimento mais seguro e eficiente.
-- **React Native**: Construção de interfaces mobile.
-- **Expo**: Desenvolvimento e deployment simplificado.
-- **Expo Router**: Facilita a navegação entre telas de forma declarativa e organizada, inspirada pelo sistema de roteamento de páginas web.
-- **React Native Track Player**: Implementação de funcionalidades avançadas de player.
-- **Clerk**: Gerenciamento de autenticação e usuários, garantindo segurança e facilidade de uso.
-- **Redux**: Gerenciamento centralizado do estado para playlists, músicas favoritas e preferências do usuário.
-- **Tailwind (Nativewind)**: Estilização com classes utilitárias usando Tailwind via Nativewind, tornando a interface responsiva e estilizada.
+- **TypeScript**: JavaScript superset that adds static typing for safer and more efficient development.
+- **React Native**: Building mobile interfaces.
+- **Expo**: Simplified development and deployment.
+- **Expo Router**: Facilitates screen navigation in a declarative and organized way, inspired by the web page routing system.
+- **React Native Track Player**: Advanced player functionalities.
+- **Clerk**: User authentication and management, ensuring security and ease of use.
+- **Redux**: Centralized state management for playlists, favorite songs, and user preferences.
+- **Tailwind (Nativewind)**: Styling with utility classes using Tailwind via Nativewind, making the interface responsive and styled.
 
-## 🛠 <a name="instalacao-e-configuracao">Instalação e Configuração</a>
+## 🛠 <a name="installation-and-setup">Installation and Setup</a>
 
-1. Clone este repositório:
+1. Clone this repository:
 ```bash
 git clone https://github.com/seu-usuario/soundify.git
 cd soundify
 ```
 
-2. Instale as dependências:
+2. nstall dependencies:
 ```bash
 npm install
 ```
 
-3. **Baixar as Builds Especiais**
+3. **Download Special Builds**
 
-   Este projeto utiliza código nativo, então é necessário utilizar uma build especial para cada plataforma:
+   This project uses native code, so a special build is required for each platform:
 
-   - **Android**: [Link para download da build de Android](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/90f2a93c-1306-4566-8ffa-74b9a9e96664)
-   - **iOS**: [Link para download da build de iOS](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/58cf1c5a-ee28-4360-b7dd-a7696cfb91a6)
+   - **Android**: [Link to Android build download](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/90f2a93c-1306-4566-8ffa-74b9a9e96664)
+   - **iOS**: [Link to iOS build download](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/58cf1c5a-ee28-4360-b7dd-a7696cfb91a6)
 
-4. **Configurar Clerk para Autenticação**
+4. **Configure Clerk for Authentication**
 
-   Para o funcionamento correto da autenticação, é necessário configurar uma API Key do Clerk:
+   For proper authentication functionality, a Clerk API Key must be configured:
 
-   - Crie um projeto no Clerk em [clerk.com](https://clerk.com).
-   - Copie a Publishable Key do projeto.
-   - Crie um arquivo `.env` na raiz do projeto e adicione a chave:
+   - Create a project in Clerk at [clerk.com](https://clerk.com).
+   - Copy the project’s Publishable Key.
+   - Create a .env file in the project root and add the key:
 
   ```bash
-  EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY="sua-chave-clerk-aqui"
+  EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY="your-clerk-key-here"
   ```
 
-5. **Iniciar o Servidor Expo**
+5. **Start the Expo Server**
 
-   Inicie o servidor Expo para que o app possa se conectar ao backend:
+   Start the Expo server so the app can runs:
 
    ```bash
    npx expo start
    ```
 
-6. **Executar no Simulador**
+6. **Run on Simulator**
 
-   Com a build baixada e instalada, execute o aplicativo no simulador de sua preferência. Acesse o endereço localhost gerado pelo Expo CLI no simulador para que ele se conecte ao servidor.
+   With the build downloaded and installed, run the app on your preferred simulator. Access the localhost address generated by Expo CLI in the simulator to connect it to the server.
 
-## 📂 <a name="arquitetura-do-projeto">Arquitetura do Projeto</a>
+## 📂 <a name="project-architecture">Project Architecture</a>
 
-- **src/**: Contém o código-fonte do aplicativo.
-- **components/**: Componentes reutilizáveis, como botões de controle e visualização de letras.
-- **store/**: Configuração do Redux para gerenciamento de estado.
-- **constants/**: Armazena cores, imagens e outras constantes.
-- **hooks/**: Hooks personalizados, incluindo integração com o player e temas.
-- **types/**: Definições de tipos TypeScript para uso em todo o projeto.
+- **src/**: Contains the app’s source code.
+- **components/**: Reusable components, such as control buttons and lyric views.
+- **store/**: Redux configuration for state management.
+- **constants/**: Stores colors, images, and other constants.
+- **hooks/**: Custom hooks, including player and theme integration.
+- **types/**: TypeScript type definitions for use throughout the project.
 
-## 🤝 <a name="contribuicoes">Contribuições</a>
+## 🤝 <a name="contributions">Contributions</a>
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
+Contributions are welcome! Feel free to open issues and submit pull requests.
 
-## 📄 <a name="licenca">Licença</a>
+## 📄 <a name="license">License</a>
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Desenvolvido por Lucas Matias.
+Developed by Lucas Matias.
 
-Conecte-se comigo no LinkedIn para explorar mais sobre meus projetos!
+Connect with me on LinkedIn to explore more of my projects!
