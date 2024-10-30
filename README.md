@@ -50,21 +50,22 @@ Soundify is a music streaming app developed with **React Native** and **Expo** t
 ## 📸 <a name="screenshots">Screenshots</a>
 
 <p align="center">
-  <img src="./assets/gitimages/print1.png" alt="screenshot 1" width="245">
-  <img src="./assets/gitimages/print2.png" alt="screenshot 2" width="245">
-  <img src="./assets/gitimages/print3.png" alt="screenshot 3" width="245">
-  <img src="./assets/gitimages/print4.png" alt="screenshot 4" width="245">
-  <img src="./assets/gitimages/print5.png" alt="screenshot 5" width="245">
-  <img src="./assets/gitimages/print6.png" alt="screenshot 6" width="245">
-  <img src="./assets/gitimages/print7.png" alt="screenshot 7" width="245">
-  <img src="./assets/gitimages/print8.png" alt="screenshot 8" width="245">
-  <img src="./assets/gitimages/print9.png" alt="screenshot 9" width="245">
-  <img src="./assets/gitimages/print10.png" alt="screenshot 10" width="245">
-  <img src="./assets/gitimages/print11.png" alt="screenshot 11" width="245">
-  <img src="./assets/gitimages/print12.png" alt="screenshot 12" width="245">
-  <img src="./assets/gitimages/print13.png" alt="screenshot 13" width="245">
-  <img src="./assets/gitimages/print14.png" alt="screenshot 14" width="245">
-  <img src="./assets/gitimages/print15.png" alt="screenshot 15" width="245">
+  <img src="./assets/gitimages/print1.png" alt="captura de tela 1" width="245">
+  <img src="./assets/gitimages/print2.png" alt="captura de tela 2" width="245">
+  <img src="./assets/gitimages/print3.png" alt="captura de tela 3" width="245">
+  <img src="./assets/gitimages/print4.png" alt="captura de tela 4" width="245">
+  <img src="./assets/gitimages/print5.png" alt="captura de tela 5" width="245">
+  <img src="./assets/gitimages/print16.png" alt="captura de tela 15" width="245">
+  <img src="./assets/gitimages/print6.png" alt="captura de tela 6" width="245">
+  <img src="./assets/gitimages/print7.png" alt="captura de tela 7" width="245">
+  <img src="./assets/gitimages/print8.png" alt="captura de tela 8" width="245">
+  <img src="./assets/gitimages/print9.png" alt="captura de tela 9" width="245">
+  <img src="./assets/gitimages/print10.png" alt="captura de tela 10" width="245">
+  <img src="./assets/gitimages/print11.png" alt="captura de tela 11" width="245">
+  <img src="./assets/gitimages/print12.png" alt="captura de tela 12" width="245">
+  <img src="./assets/gitimages/print13.png" alt="captura de tela 13" width="245">
+  <img src="./assets/gitimages/print14.png" alt="captura de tela 14" width="245">
+  <img src="./assets/gitimages/print15.png" alt="captura de tela 15" width="245">
 </p>
 
 ## 🚀 <a name="technologies-used">Technologies Used</a>
