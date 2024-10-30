@@ -8,9 +8,11 @@ Um aplicativo de streaming de música feito com **React Native** e **Expo** que 
 - **Criação e Login de Contas**: Registre-se e faça login de maneira segura para acessar todos os recursos do aplicativo.
 - **Player Completo**: Controle total de reprodução com funcionalidades de play/pause, repeat e controle de volume.
 - **Tocar Músicas**: Interface de player com todas as funcionalidades completas.
+- **Favoritar Músicas**: Adicione músicas aos favoritos e crie uma playlist personalizada com todas as suas músicas preferidas.
 - **Criação, Edição e Exclusão de Playlists**: Personalize sua experiência com playlists exclusivas.
 - **Navegação entre Artistas**: Explore músicas por artistas e acesse facilmente suas playlists e faixas.
 - **Floating Player Estilo Spotify**: Mantenha o controle do que está tocando com um player flutuante sempre visível.
+- **Barra de Progresso de Música**: Barra interativa que permite acompanhar o progresso, avançar ou retroceder a música.
 - **Edição de Perfil**: Personalize sua conta com a opção de escolher e atualizar a foto de perfil.
   
 ## 📸 Capturas de Tela
