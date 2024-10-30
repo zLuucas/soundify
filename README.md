@@ -17,9 +17,7 @@
   </p>
 </div>
 
-**[Leia em Português](./README_pt.md)
-
-<a name="en"><h1>🇬🇧 English</h1></a>
+**[Leia em Português 🇧🇷](./README_pt.md)**
 
 ## 📋 Tabela de Conteúdos
 
@@ -66,15 +64,15 @@ Soundify is a music streaming app developed with **React Native** and **Expo** t
 ## 🛠 <a name="installation-and-setup">Installation and Setup</a>
 
 1. Clone this repository:
-```bash
-git clone https://github.com/seu-usuario/soundify.git
-cd soundify
-```
+  ```bash
+  git clone https://github.com/seu-usuario/soundify.git
+  cd soundify
+  ```
 
-2. nstall dependencies:
-```bash
-npm install
-```
+2. Install dependencies:
+  ```bash
+  npm install
+  ```
 
 3. **Download Special Builds**
 
