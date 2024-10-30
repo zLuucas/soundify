@@ -49,7 +49,24 @@ Soundify é um aplicativo de streaming de música desenvolvido com **React Nativ
 
 ## 📸 <a name="capturas-de-tela">Capturas de Tela</a>
 
-> Adicione aqui algumas capturas de tela para ilustrar a interface.
+<p align="center">
+  <img src="./assets/gitimages/print1.png" alt="captura de tela 1" width="245">
+  <img src="./assets/gitimages/print2.png" alt="captura de tela 2" width="245">
+  <img src="./assets/gitimages/print3.png" alt="captura de tela 3" width="245">
+  <img src="./assets/gitimages/print4.png" alt="captura de tela 4" width="245">
+  <img src="./assets/gitimages/print5.png" alt="captura de tela 5" width="245">
+  <img src="./assets/gitimages/print16.png" alt="captura de tela 15" width="245">
+  <img src="./assets/gitimages/print6.png" alt="captura de tela 6" width="245">
+  <img src="./assets/gitimages/print7.png" alt="captura de tela 7" width="245">
+  <img src="./assets/gitimages/print8.png" alt="captura de tela 8" width="245">
+  <img src="./assets/gitimages/print9.png" alt="captura de tela 9" width="245">
+  <img src="./assets/gitimages/print10.png" alt="captura de tela 10" width="245">
+  <img src="./assets/gitimages/print11.png" alt="captura de tela 11" width="245">
+  <img src="./assets/gitimages/print12.png" alt="captura de tela 12" width="245">
+  <img src="./assets/gitimages/print13.png" alt="captura de tela 13" width="245">
+  <img src="./assets/gitimages/print14.png" alt="captura de tela 14" width="245">
+  <img src="./assets/gitimages/print15.png" alt="captura de tela 15" width="245">
+</p>
 
 ## 🚀 <a name="tecnologias-utilizadas">Tecnologias Utilizadas</a>
 
