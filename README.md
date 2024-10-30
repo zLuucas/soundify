@@ -1,9 +1,37 @@
-![Tela inicial do Soundify](./assets/gitimages/logo.png)
 
-# Soundify 🎶
-Um aplicativo de streaming de música feito com **React Native** e **Expo** que traz a experiência imersiva de ouvir suas músicas favoritas, explorar playlists e descobrir novos artistas.
+<div align="center">
+  <br />
+    <a href="https://youtu.be/seu-video-id" target="_blank">
+      <img src="./assets/gitimages/logo.png" alt="Tela inicial do Soundify" width="600">
+    </a>
+  <br />
 
-## 🎯 Funcionalidades Principais
+  <div>
+    <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="reactnative" />
+    <img src="https://img.shields.io/badge/-Expo-black?style=for-the-badge&logoColor=white&logo=expo&color=000020" alt="expo" />
+    <img src="https://img.shields.io/badge/-Clerk-black?style=for-the-badge&logoColor=white&logo=clerk&color=gray" alt="clerk" />
+    <img src="https://img.shields.io/badge/-Redux-black?style=for-the-badge&logoColor=white&logo=redux&color=764ABC" alt="redux" />
+    <img src="https://img.shields.io/badge/-TailwindCSS-black?style=for-the-badge&logoColor=white&logo=tailwind-css&color=38B2AC" alt="tailwind" />
+  </div>
+
+<h3 align="center">Soundify 🎶</h3>
+
+  <p align="center">
+    Um aplicativo de streaming de música feito com <strong>React Native</strong> e <strong>Expo</strong> que traz a experiência imersiva de ouvir suas músicas favoritas, explorar playlists e descobrir novos artistas.
+  </p>
+</div>
+
+## 📋 Tabela de Conteúdos
+
+1. [Funcionalidades Principais](#funcionalidades-principais)
+2. [Capturas de Tela](#capturas-de-tela)
+3. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+4. [Instalação e Configuração](#instalacao-e-configuracao)
+5. [Arquitetura do Projeto](#arquitetura-do-projeto)
+6. [Contribuições](#contribuicoes)
+7. [Licença](#licenca)
+
+## 🎯 <a name="funcionalidades-principais">Funcionalidades Principais</a>
 
 - **Criação e Login de Contas**: Registre-se e faça login de maneira segura para acessar todos os recursos do aplicativo.
 - **Player Completo**: Controle total de reprodução com funcionalidades de play/pause, repeat e controle de volume.
@@ -14,11 +42,12 @@ Um aplicativo de streaming de música feito com **React Native** e **Expo** que 
 - **Floating Player Estilo Spotify**: Mantenha o controle do que está tocando com um player flutuante sempre visível.
 - **Barra de Progresso de Música**: Barra interativa que permite acompanhar o progresso, avançar ou retroceder a música.
 - **Edição de Perfil**: Personalize sua conta com a opção de escolher e atualizar a foto de perfil.
-  
-## 📸 Capturas de Tela
 
+## 📸 <a name="capturas-de-tela">Capturas de Tela</a>
 
-## 🚀 Tecnologias Utilizadas
+> Adicione aqui algumas capturas de tela para ilustrar a interface.
+
+## 🚀 <a name="tecnologias-utilizadas">Tecnologias Utilizadas</a>
 
 - **TypeScript**: Superset do JavaScript que adiciona tipagem estática para um desenvolvimento mais seguro e eficiente.
 - **React Native**: Construção de interfaces mobile.
@@ -28,41 +57,66 @@ Um aplicativo de streaming de música feito com **React Native** e **Expo** que 
 - **Clerk**: Gerenciamento de autenticação e usuários, garantindo segurança e facilidade de uso.
 - **Redux**: Gerenciamento centralizado do estado para playlists, músicas favoritas e preferências do usuário.
 - **Tailwind (Nativewind)**: Estilização com classes utilitárias usando Tailwind via Nativewind, tornando a interface responsiva e estilizada.
-  
-## 🛠 Instalação e Configuração
+
+## 🛠 <a name="instalacao-e-configuracao">Instalação e Configuração</a>
 
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/soundify.git
    cd soundify
    ```
-2.	Instale as dependências:
+2. Instale as dependências:
    ```bash
    npm install
    ```
-3.	Inicie o aplicativo:
+3. **Baixar as Builds Especiais**
+
+   Este projeto utiliza código nativo, então é necessário utilizar uma build especial para cada plataforma:
+
+   - **Android**: [Link para download da build de Android](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/90f2a93c-1306-4566-8ffa-74b9a9e96664)
+   - **iOS**: [Link para download da build de iOS](https://expo.dev/accounts/darkincorporation/projects/soundify/builds/58cf1c5a-ee28-4360-b7dd-a7696cfb91a6)
+
+4. **Configurar Clerk para Autenticação**
+
+   Para o funcionamento correto da autenticação, é necessário configurar uma API Key do Clerk:
+
+   - Crie um projeto no Clerk em [clerk.com](https://clerk.com).
+   - Copie a Publishable Key do projeto.
+   - Crie um arquivo `.env` na raiz do projeto e adicione a chave:
+
+   ```bash
+   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY="sua-chave-clerk-aqui"
+   ```
+
+5. **Iniciar o Servidor Expo**
+
+   Inicie o servidor Expo para que o app possa se conectar ao backend:
+
    ```bash
    npx expo start
    ```
-	Nota: Certifique-se de que o Expo CLI está instalado para executar o projeto.
 
-📄 Arquitetura do Projeto
+6. **Executar no Simulador**
 
-	•	src/: Contém o código-fonte do aplicativo.
-	•	components/: Componentes reutilizáveis, como botões de controle e visualização de letras.
-	•	screens/: Diferentes telas, como Home, Player, Artista.
-	•	store/: Configuração do Redux para gerenciamento de estado.
-	•	constants/: Armazena cores, imagens e outras constantes.
-	•	hooks/: Hooks personalizados, incluindo integração com o player e temas.
+   Com a build baixada e instalada, execute o aplicativo no simulador de sua preferência. Acesse o endereço localhost gerado pelo Expo CLI no simulador para que ele se conecte ao servidor.
 
-🤝 Contribuições
+## 📂 <a name="arquitetura-do-projeto">Arquitetura do Projeto</a>
+
+- **src/**: Contém o código-fonte do aplicativo.
+- **components/**: Componentes reutilizáveis, como botões de controle e visualização de letras.
+- **store/**: Configuração do Redux para gerenciamento de estado.
+- **constants/**: Armazena cores, imagens e outras constantes.
+- **hooks/**: Hooks personalizados, incluindo integração com o player e temas.
+- **types/**: Definições de tipos TypeScript para uso em todo o projeto.
+
+## 🤝 <a name="contribuicoes">Contribuições</a>
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
 
-📄 Licença
+## 📄 <a name="licenca">Licença</a>
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Desenvolvido por Lucas Matias
+Desenvolvido por Lucas Matias.
 
 Conecte-se comigo no LinkedIn para explorar mais sobre meus projetos!
