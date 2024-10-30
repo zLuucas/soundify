@@ -11,7 +11,8 @@
     <img src="https://img.shields.io/badge/-Redux-black?style=for-the-badge&logoColor=white&logo=redux&color=764ABC" alt="redux" />
     <img src="https://img.shields.io/badge/-TailwindCSS-black?style=for-the-badge&logoColor=white&logo=tailwind-css&color=38B2AC" alt="tailwind" />
   </div>
-
+  
+  <br />
   <p align="center">
     A music streaming app built with <strong>React Native</strong> and <strong>Expo</strong>, offering an immersive experience to listen to your favorite songs, explore playlists, and discover new artists.
   </p>
