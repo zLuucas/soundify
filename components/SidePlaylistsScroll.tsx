@@ -16,7 +16,7 @@ const SidePlaylistsScroll = () => {
                 return <TouchableOpacity key={index} activeOpacity={0.8} onPress={(() => router.navigate('/songs'))} className='mb-2'>
                     <Image
                         source={{ uri: image }}
-                        cachePolicy='memory-disk'
+                        cachePolicy='disk'
                         className={`w-40 h-40 rounded-lg mx-3 mt-3 ${isFirst && 'ml-0'} ${isLast && 'mr-0'}`}
                         contentFit='cover'
                     />

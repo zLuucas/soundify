@@ -4,7 +4,7 @@ import { useClerk } from '@clerk/clerk-expo';
 import { Image } from 'expo-image';
 import { router, useNavigation } from 'expo-router';
 import React, { useLayoutEffect } from 'react'
-import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { useDispatch } from 'react-redux';
 import Swiper from 'react-native-swiper';
 import CustomButton from '@/components/UI/CustomButton';
@@ -13,7 +13,6 @@ import { swiperPlaylists } from '@/assets/data/homeplaylists';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SidePlaylistsScroll from '@/components/SidePlaylistsScroll';
 import UserPlaylistsList from '@/components/UserPlaylistsList';
-const { width } = Dimensions.get('window');
 
 const HomeScreen = () => {
 

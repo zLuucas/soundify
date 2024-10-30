@@ -2,13 +2,9 @@ import themeColors from '@/src/constants/colors';
 import { BlurView } from 'expo-blur';
 import { Tabs } from 'expo-router';
 import { Platform, StyleSheet } from 'react-native';
-import { FontAwesome, MaterialCommunityIcons, Ionicons, FontAwesome6, AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 import React from 'react';
 import FloatingPlayer from '@/components/FloatingPlayer';
-
-const test = {
-  height: 20,
-}
 
 export default function TabLayout() {
   return (

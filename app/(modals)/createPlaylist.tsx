@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRouter } from 'expo-router'
 import React, { useState } from 'react'
-import { Platform, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Platform, Text, TextInput, View } from 'react-native'
 
 const CreatePlaylist = () => {
 

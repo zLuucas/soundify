@@ -8,7 +8,7 @@ import PlayPauseButton from './PlayPauseButton';
 import MovingText from './MovingText';
 import { useLastActiveTrack } from '@/src/hooks/useLastActiveTrack';
 import { usePathname, useRouter } from 'expo-router';
-import TrackPlayer, { Track, useActiveTrack } from 'react-native-track-player';
+import TrackPlayer, { useActiveTrack } from 'react-native-track-player';
 
 const SWIPE_THRESHOLD = 100;
 

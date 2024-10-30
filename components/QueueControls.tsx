@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react'
 import { Text, View, ViewProps } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import TrackPlayer, { Track } from 'react-native-track-player';
+import { Track } from 'react-native-track-player';
 
 type QueueControlsProps = {
     tracks: Track[];
@@ -12,21 +12,6 @@ type QueueControlsProps = {
 } & ViewProps;
 
 const QueueControls = ({ tracks, className, onPlay, onShufflePlay, ...viewProps }: QueueControlsProps) => {
-
-    // const handlePlay = async () => {
-    //     await TrackPlayer.setQueue(tracks);
-    //     await TrackPlayer.play();
-    // }
-
-    // const handleShufflePlay = async () => {
-    //     const shuffledTracks = [...tracks].sort(() => Math.random() - 0.5);
-
-    //     await TrackPlayer.setQueue(shuffledTracks);
-    //     await TrackPlayer.play();
-
-    //     dispatch(setActiveQueue({ queueId }));
-
-    // }
 
     return (
         <View className={`flex-row space-x-4 ${className}`} {...viewProps}>

@@ -26,12 +26,10 @@ const AddToPlaylist = () => {
 
     const handlePlaylistPress = async (playlist: Playlist) => {
 
-        //Add to playlist dispatch
         dispatch(addToPlaylist({ playlistName: playlist.name, track }));
         dispatch(savePlaylists());
 
         if (activeQueueId?.startsWith(playlist.name)) {
-            // Add the track to the queue
             await TrackPlayer.add(track);
         }
 

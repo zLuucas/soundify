@@ -4,7 +4,6 @@ import VerticalSelector from '@/components/VerticalSelector'
 import { useModalBottomSheet } from '@/src/hooks/useModalBottomSheet'
 import { useSettings } from '@/src/hooks/useSettings'
 import { AudioQualityOptions } from '@/src/store/userSlice'
-import React, { useState } from 'react'
 import { SafeAreaView, Text, View } from 'react-native'
 
 const getAudioQualityIndex = (audioQuality: AudioQualityOptions) => {

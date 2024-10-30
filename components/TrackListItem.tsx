@@ -1,9 +1,7 @@
 import { unknownTrackImageUrl } from '@/src/constants/images';
 import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons';
-import React, { useRef, useState } from 'react'
-import { Image, Platform, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native'
+import { Image, Platform, Text, TouchableOpacity, View } from 'react-native'
 import { Track, useActiveTrack, useIsPlaying } from 'react-native-track-player';
-// import FastImage from 'react-native-fast-image'
 import LoaderKit from 'react-native-loader-kit';
 import themeColors from '@/src/constants/colors';
 import { useStoreSelector } from '@/src/store/hooks';

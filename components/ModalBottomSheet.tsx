@@ -1,7 +1,6 @@
 import { BottomSheetBackdrop, BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet';
 import React, { forwardRef, useCallback, useMemo } from 'react'
 import { StyleSheet } from 'react-native';
-import { useColorScheme } from 'nativewind';
 import themeColors from '@/src/constants/colors';
 
 type ModalBottomSheetProps = {

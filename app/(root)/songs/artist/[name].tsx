@@ -2,7 +2,7 @@ import ArtistTracksList from '@/components/ArtistTracksList';
 import { useArtists } from '@/src/hooks/useArtists';
 import { Redirect, useLocalSearchParams, useNavigation } from 'expo-router'
 import React, { useLayoutEffect } from 'react'
-import { SafeAreaView, ScrollView, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
 
 const ArtistDetails = () => {
 

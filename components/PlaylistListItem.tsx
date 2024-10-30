@@ -1,6 +1,6 @@
 import { unknownTrackImageUrl } from '@/src/constants/images';
 import { Playlist } from '@/src/types';
-import { AntDesign, Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import React from 'react'
 import { Image, Text, TouchableHighlight, View } from 'react-native';
 import PlaylistShortcutsMenu from './PlaylistShortcutsMenu';

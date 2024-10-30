@@ -17,7 +17,7 @@ const UserPlaylistsList = () => {
     const { activeQueueId } = useStoreSelector(state => state.queue);
 
     const maxRowCell = 2;
-    const rowNumber = Math.ceil(userPlaylists.length / maxRowCell);
+    const rowNumber = Math.ceil(userPlaylists.length / maxRowCell) <= 8 ? Math.ceil(userPlaylists.length / maxRowCell) : 8;
 
     return (
         <View className='mt-10'>
@@ -32,19 +32,16 @@ const UserPlaylistsList = () => {
 
                             const isPlaying = activeQueueId === name;
 
-                            console.log(index);
                             return <TouchableOpacity key={index} className={`flex-1 flex-row space-x-2 m-1 items-center bg-secondary-900 rounded ${isLeft && 'ml-0'} ${isRight && ''}`}>
                                 <Image
                                     source={{ uri: artworkPreview.length > 0 ? artworkPreview : unknownTrackImageUrl }}
                                     className='w-12 h-12 rounded-l-lg'
                                     cachePolicy='disk'
                                 />
-                                <Text className='text-secondary-100 font-semibold'>{name}</Text>
+                                <Text className='text-secondary-100 font-semibold w-24'>{name}</Text>
                                 {isPlaying && <LoaderKit
                                     style={{
                                         position: 'relative',
-                                        top: 0,
-                                        left: 16,
                                         width: 16,
                                         height: 16,
                                     }}

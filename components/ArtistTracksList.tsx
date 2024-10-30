@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, ScrollView, View } from 'react-native'
+import { Image, View } from 'react-native'
 import { Track } from 'react-native-track-player'
 import TracksList from './TracksList'
 import { unknownArtistImageUrl } from '@/src/constants/images'

@@ -1,14 +1,10 @@
 import ProfileOptionsMenu from '@/components/ProfileOptionsMenu'
-import ProfilePicturePicker from '@/components/ProfilePicturePicker'
 import themeColors from '@/src/constants/colors'
-import { unknownArtistImageUrl } from '@/src/constants/images'
 import { useUser } from '@/src/hooks/useUser'
-import { useStoreSelector } from '@/src/store/hooks'
 import { useClerk } from '@clerk/clerk-expo'
 import { AntDesign } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
-import React, { useEffect } from 'react'
-import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, Text, View } from 'react-native'
 
 const ProfileScreen = () => {
 

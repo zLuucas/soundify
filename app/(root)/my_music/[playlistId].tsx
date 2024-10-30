@@ -3,8 +3,7 @@ import { useStoreSelector } from '@/src/store/hooks';
 import { getTracksByNames } from '@/utils';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { useLayoutEffect } from 'react';
-import { Platform, SafeAreaView } from 'react-native'
-import { SafeAreaView as SafeArea } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native'
 
 const PlaylistDetails = () => {
 

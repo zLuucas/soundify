@@ -1,7 +1,7 @@
 import themeColors from '@/src/constants/colors';
 import { AntDesign, Entypo } from '@expo/vector-icons';
 import React from 'react'
-import { TouchableOpacity, View } from 'react-native';
+import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Icon from './UI/Icon';
 

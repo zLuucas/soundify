@@ -16,7 +16,6 @@ import { useDispatch } from 'react-redux'
 import { savePlaylists, toggleTrackFavorite } from '@/src/store/librarySlice'
 import { useStoreSelector } from '@/src/store/hooks'
 import { getPathById } from '@/utils'
-import { useEffect, useState } from 'react'
 
 const PlayerScreen = () => {
 

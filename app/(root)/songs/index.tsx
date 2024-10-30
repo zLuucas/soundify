@@ -1,9 +1,6 @@
 import TracksList from '@/components/TracksList'
-import { Platform, SafeAreaView, ScrollView, Text, View } from 'react-native'
-// import { SafeAreaView as SafeArea } from 'react-native-safe-area-context';
+import { SafeAreaView, ScrollView, Text, View } from 'react-native'
 import library from '@/assets/data/library.json'
-import { useLayoutEffect } from 'react';
-import { useNavigation } from 'expo-router';
 
 const SongsScreen = () => {
 

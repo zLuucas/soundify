@@ -1,7 +1,6 @@
 import { useTrackPlayerVolume } from '@/src/hooks/useTrackPlayerVolume';
 import themeColors from '@/src/constants/colors';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '@react-navigation/native';
 import React from 'react'
 import { View } from 'react-native'
 import { Slider } from 'react-native-awesome-slider';

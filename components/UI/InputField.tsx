@@ -1,4 +1,3 @@
-
 import themeColors from '@/src/constants/colors'
 import { InputFieldProps } from '@/src/types'
 import React from 'react'

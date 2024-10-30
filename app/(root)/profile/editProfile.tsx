@@ -2,13 +2,10 @@ import ProfilePicturePicker from '@/components/ProfilePicturePicker'
 import CustomButton from '@/components/UI/CustomButton'
 import InputField from '@/components/UI/InputField'
 import { useUser } from '@/src/hooks/useUser'
-import { useStoreSelector } from '@/src/store/hooks'
-import { updateUserData } from '@/src/store/userSlice'
 import { useClerk } from '@clerk/clerk-expo'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import React, { useState } from 'react'
 import { SafeAreaView, View } from 'react-native'
-import { useDispatch } from 'react-redux'
 
 const EditProfileScreen = () => {
 

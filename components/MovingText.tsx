@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { View } from 'react-native'
 import Animated, { cancelAnimation, Easing, StyleProps, useAnimatedStyle, useSharedValue, withDelay, withRepeat, withTiming } from 'react-native-reanimated'
 
 type MovingTextProps = {

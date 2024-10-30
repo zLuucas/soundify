@@ -1,6 +1,6 @@
 import { launchImageLibraryAsync, MediaTypeOptions, PermissionStatus, useCameraPermissions } from 'expo-image-picker';
 import React, { useEffect, useState } from 'react'
-import { Alert, Pressable, StyleSheet, View } from 'react-native'
+import { Alert, Pressable, View } from 'react-native'
 import { useClerk } from '@clerk/clerk-expo';
 import { Image } from 'expo-image';
 import { AntDesign } from '@expo/vector-icons';

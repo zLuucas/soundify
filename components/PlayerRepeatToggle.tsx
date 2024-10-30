@@ -2,8 +2,6 @@ import { useTrackPlayerRepeatMode } from '@/src/hooks/useTrackPlayerRepeatMode';
 import themeColors from '@/src/constants/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React, { ComponentProps } from 'react'
-import { View } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { RepeatMode } from 'react-native-track-player'
 import { match } from 'ts-pattern';
 import Icon from './UI/Icon';

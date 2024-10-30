@@ -98,7 +98,9 @@ const RootNavigation = () => {
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <ClerkLoaded>
 
-        <Stack>
+        <Stack screenOptions={{
+          contentStyle: { backgroundColor: '#000' },
+        }}>
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="(root)" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />

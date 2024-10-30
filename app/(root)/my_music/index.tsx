@@ -1,6 +1,4 @@
-
-import { Platform, SafeAreaView, View } from 'react-native'
-import { SafeAreaView as SafeArea } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native'
 import PlaylistsList from '@/components/PlaylistsList';
 import { useStoreSelector } from '@/src/store/hooks';
 import { Playlist } from '@/src/types';

@@ -36,8 +36,6 @@ const TrackShortcutsMenu = ({ children, track, longPress = false, style, }: Trac
 
         match(id)
             .with('add-to-favorites', async () => {
-                // Add to favorites
-
                 dispatch(toggleTrackFavorite({ track }));
                 dispatch(savePlaylists());
 
@@ -48,8 +46,6 @@ const TrackShortcutsMenu = ({ children, track, longPress = false, style, }: Trac
 
             })
             .with('remove-from-favorites', async () => {
-                // Remove from favorites
-
                 dispatch(toggleTrackFavorite({ track }));
                 dispatch(savePlaylists());
 

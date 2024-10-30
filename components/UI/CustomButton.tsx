@@ -1,5 +1,4 @@
 import themeColors from '@/src/constants/colors';
-import { AntDesign } from '@expo/vector-icons';
 import React from 'react'
 import { ActivityIndicator, Text, TouchableOpacity } from 'react-native'
 

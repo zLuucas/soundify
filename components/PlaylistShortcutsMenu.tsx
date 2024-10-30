@@ -1,11 +1,10 @@
-import { useStoreDispatch, useStoreSelector } from "@/src/store/hooks"
-import { removeFromPlaylist, savePlaylists, toggleTrackFavorite } from "@/src/store/librarySlice"
+import { useStoreDispatch } from "@/src/store/hooks"
+import { deletePlaylist, savePlaylists } from "@/src/store/librarySlice"
 import { Playlist } from "@/src/types"
 import { MenuView } from "@react-native-menu/menu"
-import { usePathname, useRouter } from "expo-router"
-import { PropsWithChildren, useState } from "react"
-import { StyleProp, ViewStyle } from "react-native"
-import TrackPlayer, { Track } from "react-native-track-player"
+import { router } from "expo-router"
+import { PropsWithChildren } from "react"
+import { Alert, StyleProp, ViewStyle } from "react-native"
 import { match } from "ts-pattern"
 
 type PlaylistShortcutsMenuProps = PropsWithChildren<{
@@ -16,7 +15,7 @@ type PlaylistShortcutsMenuProps = PropsWithChildren<{
 
 const PlaylistShortcutsMenu = ({ children, playlist, longPress = false, style, }: PlaylistShortcutsMenuProps) => {
 
-    const router = useRouter();
+    const dispatch = useStoreDispatch();
 
     const handlePressAction = (id: string) => {
 
@@ -25,7 +24,24 @@ const PlaylistShortcutsMenu = ({ children, playlist, longPress = false, style, }
                 router.push(`/(modals)/editPlaylist?id=${playlist.name}`);
             })
             .with('delete-playlist', async () => {
-
+                Alert.alert(
+                    "Delete Playlist",
+                    `Are you sure you want to delete ${playlist.name}?`,
+                    [
+                        {
+                            text: "Cancel",
+                            style: "cancel"
+                        },
+                        {
+                            text: "Delete",
+                            onPress: () => {
+                                dispatch(deletePlaylist({ playlistName: playlist.name }));
+                                dispatch(savePlaylists());
+                            },
+                            style: "destructive"
+                        }
+                    ]
+                );
             })
             .otherwise(() => console.log("No action matched", id));
     }

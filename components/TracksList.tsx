@@ -1,11 +1,10 @@
-import { FlatList, FlatListProps, ScrollView, Text, TextInput, View } from 'react-native'
+import { FlatList, ScrollView, Text, View } from 'react-native'
 import TrackListItem from './TrackListItem'
 import SearchBar from './UI/SearchBar'
-import { AntDesign, Ionicons, MaterialIcons } from '@expo/vector-icons'
+import { AntDesign, MaterialIcons } from '@expo/vector-icons'
 import { useMemo, useRef, useState } from 'react'
 import TrackPlayer, { Track } from 'react-native-track-player'
 import themeColors from '@/src/constants/colors'
-import { useSelector } from 'react-redux'
 import { useStoreDispatch, useStoreSelector } from '@/src/store/hooks'
 import { setActiveQueue } from '@/src/store/queueSlice'
 import QueueControls from './QueueControls'
@@ -33,10 +32,6 @@ const TracksList = ({ queueId, tracks, showQueueControls = true, showSearchBar =
     const dispatch = useStoreDispatch();
 
     const [searchQuery, setSearchQuery] = useState('');
-
-    const handleSearchQuery = () => {
-        console.log('searching')
-    }
 
     const filteredSongs: Track[] = useMemo(() => {
         if (searchQuery === '') return tracks;
@@ -122,7 +117,6 @@ const TracksList = ({ queueId, tracks, showQueueControls = true, showSearchBar =
                 value={searchQuery}
                 onChangeText={setSearchQuery}
                 placeholder='Search music or artists'
-                onSubmitEditing={handleSearchQuery}
                 icon={<AntDesign name='search1' size={24} color={"#83868a"}
                     style={{ marginLeft: 10 }} />}
             />}

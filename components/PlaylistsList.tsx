@@ -5,7 +5,6 @@ import { FlatList, Platform, ScrollView, Text, TouchableOpacity, View } from 're
 import PlaylistListItem from './PlaylistListItem'
 import themeColors from '@/src/constants/colors'
 import { useRouter } from 'expo-router'
-import { useStoreSelector } from '@/src/store/hooks'
 
 type PlaylistsListProps = {
     playlists: Playlist[];
